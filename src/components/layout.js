@@ -1,5 +1,6 @@
 import React from 'react'
-import Header from '../pages/header'
+import Header from './header'
+import StartSection from './start-section';
 import { createGlobalStyle } from "styled-components"
 import "@fontsource/heebo/400.css"
 import "@fontsource/heebo/500.css"
@@ -28,6 +29,7 @@ const Layout = () => {
         <main>
             <GlobalStyles />
             <Header></Header>
+            <StartSection></StartSection>
         </main>
     )
 }
