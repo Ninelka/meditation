@@ -92,8 +92,8 @@ const Header = () => {
             <nav>
                 <Menu>
                     {links.map(link => (
-                        <MenuItem>
-                            <Link key={link.url} to={link.url}>
+                        <MenuItem key={link.url}>
+                            <Link to={link.url}>
                                 {link.text}
                             </Link>
                         </MenuItem>
