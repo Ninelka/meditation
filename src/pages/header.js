@@ -31,9 +31,11 @@ const MenuItem = styled.li`
         right: 0;
         bottom: -32px;
         height: 10px;
-        background: var(--color-primary);
+        background-color: var(--color-primary);
         border-radius: 10px 10px 0px 0px;
         opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        transition-delay: 0.2s;
     }
 
     a {
