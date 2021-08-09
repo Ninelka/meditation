@@ -12,13 +12,14 @@ const Wrapper = styled.header`
 
 const Menu = styled.ul`
     display: flex;
+    text-align: center;
     list-style: none;
 `
 
 const MenuItem = styled.li`
     position: relative;
     padding: 0 15px;
-    margin-right: 80px;
+    min-width: 66px;
 
     &:last-child {
         margin-right: 0;
@@ -51,6 +52,7 @@ const MenuItem = styled.li`
         
         a {
             color: var(--color-primary);
+            font-weight: 500;
         }
     }
 `
