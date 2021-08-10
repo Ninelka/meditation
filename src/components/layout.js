@@ -14,13 +14,12 @@ const GlobalStyles = createGlobalStyle`
 
     html {
         --color-primary: #1A7F72;
-        --text-primary: #000;
-        --text-secondary: rgba(#000, 0.5);
+        --text-primary: #000000;
+        --text-secondary: rgba(0,0,0, 0.5);
     }
 
     main {
-        max-width: 1620px;
-        margin: 0 auto;
+        background-color: rgba(59, 209, 187, 0.09);
     }
 `
 
