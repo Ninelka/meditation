@@ -1,13 +1,14 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import Logo from '../images/logo.svg';
+import Logo from '../images/logo.svg'
+import Links from '../data/links'
 import styled from "styled-components"
 
 const Container = styled.header`
     background-color: white;
 `
 
-const Wrapper = styled.header`
+const Wrapper = styled.div`
     max-width: 1620px;
     margin: 0 auto;
     display: flex;
@@ -64,35 +65,6 @@ const MenuItem = styled.li`
         }
     }
 `
-
-// data
-const links = [
-    {
-        text: "Home",
-        url: "/",
-    },
-    {
-        text: "Explore",
-        url: "/explore",
-    },
-    {
-        text: "Classes",
-        url: "/classes",
-    },
-    {
-        text: "About Us",
-        url: "/about-us",
-    },
-    {
-        text: "Privacy",
-        url: "/privacy",
-    },
-    {
-        text: "Services",
-        url: "/services",
-    },
-]
-
 const Header = () => {
     return (
         <Container>
@@ -100,7 +72,7 @@ const Header = () => {
                 <img width="148px" height="119px" src={Logo} alt="logo"></img>
                 <nav>
                     <Menu>
-                        {links.map(link => (
+                        {Links.map(link => (
                             <MenuItem key={link.url}>
                                 <Link to={link.url}>
                                     {link.text}
