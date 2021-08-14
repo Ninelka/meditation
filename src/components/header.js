@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import Logo from '../images/logo.svg'
+import Logo from '../images/common/logo.svg'
 import Links from '../data/links'
 import styled from "styled-components"
 

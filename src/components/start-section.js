@@ -1,6 +1,6 @@
 import React from 'react'
-import startPicture from '../images/start-picture.svg';
-import startBg from '../images/main-bg.svg';
+import startPicture from '../images/start/start-picture.svg';
+import startBg from '../images/start/start-bg.svg';
 import { ReactSVG } from 'react-svg'
 import Button from '../components/button';
 import styled from "styled-components"

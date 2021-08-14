@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import Button from './button';
 
-import meditationIcon from '../images/ic_meditation.svg';
-import meditationBg from '../images/feature-meditation-bg.svg';
-import yogaIcon from '../images/ic_yoga.svg';
-import yogaBg from '../images/feature-yoga-bg.svg';
-import soundIcon from '../images/ic_sound.svg';
-import soundBg from '../images/feature-sound-bg.svg';
+import meditationIcon from '../images/feature/ic_meditation.svg';
+import meditationBg from '../images/feature/feature-meditation-bg.svg';
+import yogaIcon from '../images/feature/ic_yoga.svg';
+import yogaBg from '../images/feature/feature-yoga-bg.svg';
+import soundIcon from '../images/feature/ic_sound.svg';
+import soundBg from '../images/feature/feature-sound-bg.svg';
 
 const Container = styled.section`
     max-width: 1620px;

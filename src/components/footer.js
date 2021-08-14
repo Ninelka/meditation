@@ -1,10 +1,10 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import Logo from '../images/logo.svg'
-import Facebook from '../images/ic_facebook.svg';
-import Instagram from '../images/ic_instagram.svg';
-import Twitter from '../images/ic_twitter.svg';
-import FooterBg from '../images/footer-bg.svg';
+import Logo from '../images/common/logo.svg'
+import Facebook from '../images/footer/ic_facebook.svg';
+import Instagram from '../images/footer/ic_instagram.svg';
+import Twitter from '../images/footer/ic_twitter.svg';
+import FooterBg from '../images/footer/footer-bg.svg';
 import Links from '../data/links'
 import styled from "styled-components"
 
