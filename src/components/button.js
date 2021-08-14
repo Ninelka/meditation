@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 const Btn = styled.button`
     font-size: 24px;
+    line-height: 130%;
     padding: 12px 44px;
     border: none;
     color: white;
