@@ -3,6 +3,7 @@ import Header from './header'
 import Footer from './footer';
 import StartSection from './start-section';
 import FeatureSection from './feature-section';
+import Practice from './practice';
 import { createGlobalStyle } from "styled-components"
 import "@fontsource/heebo/400.css"
 import "@fontsource/heebo/500.css"
@@ -32,6 +33,7 @@ const Layout = () => {
             <Header></Header>
             <StartSection></StartSection>
             <FeatureSection></FeatureSection>
+            <Practice></Practice>
             <Footer></Footer>
         </main>
     )
