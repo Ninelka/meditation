@@ -1,9 +1,12 @@
 import React from 'react'
+
 import Header from './header'
 import Footer from './footer';
 import StartSection from './start-section';
 import FeatureSection from './feature-section';
 import Practice from './practice';
+import Music from './music';
+
 import { createGlobalStyle } from "styled-components"
 import "@fontsource/heebo/400.css"
 import "@fontsource/heebo/500.css"
@@ -34,6 +37,7 @@ const Layout = () => {
             <StartSection></StartSection>
             <FeatureSection></FeatureSection>
             <Practice></Practice>
+            <Music></Music>
             <Footer></Footer>
         </main>
     )
