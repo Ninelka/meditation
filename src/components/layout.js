@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './header'
 import Footer from './footer';
 import StartSection from './start-section';
+import FeatureSection from './feature-section';
 import { createGlobalStyle } from "styled-components"
 import "@fontsource/heebo/400.css"
 import "@fontsource/heebo/500.css"
@@ -30,6 +31,7 @@ const Layout = () => {
             <GlobalStyles />
             <Header></Header>
             <StartSection></StartSection>
+            <FeatureSection></FeatureSection>
             <Footer></Footer>
         </main>
     )
