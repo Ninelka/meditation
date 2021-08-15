@@ -9,6 +9,7 @@ import MeditationePlateReverseBg from '../images/meditation/meditation-plate-rev
 const Container = styled.section`
     background-image: url(${MeditationeBg});
     background-position: top left;
+    background-size: 100% auto;
     background-repeat: no-repeat;
 `
 

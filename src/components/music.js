@@ -9,6 +9,7 @@ import MusicPlateIcon from '../images/music/music-plate-icon.svg';
 const Container = styled.section`
     background-image: url(${MusicBg});
     background-position: top left;
+    background-size: 100% auto;
     background-repeat: no-repeat;
 `
 
