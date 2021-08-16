@@ -52,7 +52,6 @@ const Row = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
     margin: 70px 0 162px;
 `
 
