@@ -7,6 +7,7 @@ import FeatureSection from './feature-section';
 import Practice from './practice';
 import Music from './music';
 import Meditation from './meditation';
+import Transform from './transform';
 
 import { createGlobalStyle } from "styled-components"
 import "@fontsource/heebo/400.css"
@@ -40,6 +41,7 @@ const Layout = () => {
             <Practice></Practice>
             <Music></Music>
             <Meditation></Meditation>
+            <Transform></Transform>
             <Footer></Footer>
         </main>
     )
