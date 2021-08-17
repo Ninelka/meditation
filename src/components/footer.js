@@ -59,7 +59,6 @@ const MenuItem = styled.li`
     }
 
     &:hover {
-        
         a {
             color: var(--color-primary);
         }
@@ -72,6 +71,13 @@ const Socials = styled.div`
 
     a {
         margin-right: 30px;
+
+        :hover {
+            img {
+                box-shadow: 0px 10px 10px rgba(26, 127, 114, 0.65);
+                border-radius: 50%;
+            }
+        }
 
         &:last-child {
             margin-right: 0;

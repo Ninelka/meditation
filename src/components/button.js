@@ -12,6 +12,10 @@ const Btn = styled.button`
     border-radius: 30px;
     cursor: pointer;
 
+    :hover {
+        box-shadow: 0px 13px 28px rgba(26, 127, 114, 0.65);
+    }
+
     &.size-l {
         font-size: 30px;
         font-weight: bold;

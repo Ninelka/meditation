@@ -89,6 +89,10 @@ const Button = styled.button`
     border: none;
     border-radius: 50%;
     cursor: pointer;
+
+    :hover {
+        box-shadow: 0px 25px 30px rgba(179, 228, 221, 0.5), 0px 9px 24px rgba(26, 127, 114, 0.83);
+    }
 `
 
 const Image = styled.img`
