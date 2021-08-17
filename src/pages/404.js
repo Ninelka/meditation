@@ -1,54 +1,120 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import styled, { createGlobalStyle } from 'styled-components'
+import { ReactSVG } from 'react-svg'
+import Button from '../components/button';
+import meditatingWoman from '../images/common/meditating-woman.svg';
 
 // styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+const GlobalStyles = createGlobalStyle`
+    * {
+        padding: 0;
+        margin: 0;
+    }
+`
+const Container = styled.main`
+	width: 100vw;
+	height: 100vh;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: rgba(59, 209, 187, 0.09);
+`
+const Title = styled.h1`
+    font-family: "Merienda One";
+    color: #1A7F72;
+    font-size: 137px;
+	margin: 0;
+`
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+const Text = styled.span`
+	font-family: "Merienda One";
+    color: #1A7F72;
+    font-size:96px;
+`
+
+const MeditatingWoman = styled.div`
+    margin: 52px 0;
+
+	svg {
+		max-width: 400px;
+    	max-height: 378px;
+	}
+
+    .container {
+        text-align: center;
+        padding: 58px 0;
+    }
+
+    #atom-section-2 {
+    	animation: lines-left 20s infinite linear;
+    }
+
+    #atom-section {
+      	animation: lines-right 20s infinite linear;
+    }
+
+    #woman {
+      	animation: levitating-woman 2s infinite;
+    }
+
+    @keyframes lines-left {
+		0% {
+			transform: rotate(360deg);
+			transform-origin: center center;
+		}
+		
+		100% {
+			transform: rotate(0deg);
+			transform-origin: center center;
+		}
+    }
+
+    @keyframes lines-right {
+		0% {
+			transform: rotate(0deg);
+			transform-origin: center center;
+		}
+		
+		100% {
+			transform: rotate(360deg);
+			transform-origin: center center;
+		}
+    }
+
+    @keyframes levitating-woman {
+		0% {
+			transform: translateY(10px);
+		}
+		50% {
+			transform: translateY(30px);
+		}
+		100% {
+			transform: translateY(10px);
+		}
+    }
+`
 
 // markup
 const NotFoundPage = () => {
-  return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
-  )
+	return (
+		<Container>
+			<GlobalStyles />
+			<Title>
+				404
+			</Title>
+			<Text>
+				Page not found
+			</Text>
+			<MeditatingWoman>
+				<ReactSVG src={meditatingWoman} />
+			</MeditatingWoman>
+			<Link to="/">
+				<Button isBig="true" text="Go to home"></Button>
+			</Link>
+		</Container>
+	)
 }
 
 export default NotFoundPage
