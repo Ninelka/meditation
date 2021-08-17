@@ -1,5 +1,5 @@
 import React from 'react'
-import startPicture from '../images/start/start-picture.svg';
+import meditatingWoman from '../images/common/meditating-woman.svg';
 import startBg from '../images/start/start-bg.svg';
 import { ReactSVG } from 'react-svg'
 import Button from '../components/button';
@@ -108,7 +108,7 @@ const StartSection = () => {
                 </Text>
                 <Button isBig="true" text="Get Start"></Button>
                 <MeditatingWoman>
-                    <ReactSVG src={startPicture} />
+                    <ReactSVG src={meditatingWoman} />
                 </MeditatingWoman>
             </Wrapper>
         </Container>
