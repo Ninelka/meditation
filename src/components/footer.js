@@ -10,6 +10,7 @@ import styled from "styled-components"
 
 const Container = styled.footer`
     background-image: url(${FooterBg});
+    background-repeat: no-repeat;
     background-position: bottom center;
     background-size: 100% auto;
 `
@@ -20,13 +21,22 @@ const Wrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     padding-top: 105px;
+
+    @media (max-width: 1919px) {
+        padding-top: 1%;
+    }
 `
 
 const Menu = styled.ul`
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     list-style: none;
     margin: 32px 0 0;
+
+    @media (max-width: 1023px) {
+        justify-content: center;
+    }
 `
 
 const MenuItem = styled.li`
@@ -47,6 +57,10 @@ const MenuItem = styled.li`
         width: 2px;
         height: 30px;
         background-color: var(--text-primary);
+
+        @media (max-width: 816px) {
+            display: none;
+        }
     }
 
     a {
