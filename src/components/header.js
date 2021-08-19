@@ -1,5 +1,6 @@
-import * as React from "react"
+import * as React, { useState } from "react"
 import { Link } from "gatsby"
+import BurgerBtn from './burger-btn';
 import Logo from '../images/common/logo.svg'
 import Links from '../data/links'
 import styled from "styled-components"
@@ -66,12 +67,15 @@ const MenuItem = styled.li`
     }
 `
 const Header = () => {
+    const [open, setOpen] = useState(false);
+
     return (
         <Container>
             <Wrapper>
                 <img width="148px" height="119px" src={Logo} alt="logo"></img>
                 <nav>
-                    <Menu>
+                    <BurgerBtn open={open} setOpen={setOpen}></BurgerBtn>
+                    <Menu className={open ? 'is-open' : ''}>
                         {Links.map(link => (
                             <MenuItem key={link.url}>
                                 <Link to={link.url}>
