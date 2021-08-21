@@ -85,7 +85,7 @@ const FeatureSection = () => {
         <Container>
             <Row>
                 {data.map(feature => (
-                    <CardContainer bg={feature.background}>
+                    <CardContainer bg={feature.background} key={feature.title}>
                         <Card>
                             <img width="100px" height="100px" src={feature.icon} alt="icon"></img>
                             <Title>{feature.title}</Title>

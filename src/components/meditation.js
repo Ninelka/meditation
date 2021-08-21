@@ -129,7 +129,7 @@ const Meditation = () => {
                 <Row>
                     <PlateList>
                         {colLeftData.map(item => (
-                            <PlateContainer>
+                            <PlateContainer key={item.title}>
                                 <PlateTitle>{item.title}</PlateTitle>
                                 <TextWrapper>
                                     <Text>{item.text}</Text>
@@ -140,7 +140,7 @@ const Meditation = () => {
                     <img width="339px" height="802px" src={MeditationeImage} alt="meditating woman"></img>
                     <PlateList>
                         {colRightData.map(item => (
-                            <PlateContainer className="is-reverse">
+                            <PlateContainer className="is-reverse" key={item.title}>
                                 <PlateTitle>{item.title}</PlateTitle>
                                 <TextWrapper>
                                     <Text>{item.text}</Text>

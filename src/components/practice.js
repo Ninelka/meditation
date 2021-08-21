@@ -126,7 +126,7 @@ const Practice = () => {
                     <img width="745px" height="594px" src={PracticeImg} alt="yoga woman"></img>
                     <CardList>
                         {data.map(item => (
-                            <CardContainer>
+                            <CardContainer key={item.title}>
                                 <Card>
                                     <CardTitle>{item.title}</CardTitle>
                                     <Text>{item.text}</Text>

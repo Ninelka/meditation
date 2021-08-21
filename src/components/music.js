@@ -123,7 +123,7 @@ const Music = () => {
                 <Row>
                     <PlateList>
                         {data.map(item => (
-                            <PlateContainer>
+                            <PlateContainer key={item.title}>
                                 <div>
                                     <PlateTitle>{item.title}</PlateTitle>
                                     <Text>{item.text}</Text>
