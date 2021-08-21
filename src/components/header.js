@@ -16,22 +16,45 @@ const Wrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 6px 0;
+    position: relative;
     
+    @media screen and (max-width: 1023px) {
+        padding: 6px 16px;
+    }
 `
 
 const Menu = styled.ul`
     display: flex;
     text-align: center;
     list-style: none;
+
+    @media screen and (max-width: 1023px) {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        transition: height 0.7s ease-in-out;
+        background-color: #3bd1bb;
+        height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: center;
+
+        &.is-open {
+            height: calc(100vh - 131px);
+        }
+    }
 `
 
 const MenuItem = styled.li`
     position: relative;
     padding: 0 15px;
-    margin-right: 60px;
+    margin: 0 60px 0 0;
 
     &:last-child {
-        margin-right: 0;
+        margin: 0;
     }
 
     ::after {
@@ -65,7 +88,31 @@ const MenuItem = styled.li`
             color: var(--color-primary);
         }
     }
+
+    @media screen and (max-width: 1293px) {
+        margin: 0 30px 0 0;
+
+        a {
+            font-size: 22px;
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        padding: 20px 15px;
+        margin: 0;
+
+        ::after {
+            display: none;
+        }
+
+        a {
+            display: block;
+            font-size: 26px;
+        }
+    }
+
 `
+
 const Header = () => {
     const [open, setOpen] = useState(false);
 
