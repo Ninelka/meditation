@@ -12,7 +12,11 @@ const Container = styled.footer`
     background-image: url(${FooterBg});
     background-repeat: no-repeat;
     background-position: bottom center;
-    background-size: 100% auto;
+    background-size: cover;
+
+    @media screen and (min-width: 1920px) {
+        background-size: 100% auto;
+    }
 `
 
 const Wrapper = styled.div`
