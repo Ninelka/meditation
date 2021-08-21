@@ -15,8 +15,12 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6px 0;
+    padding: 6px 16px;
     position: relative;
+
+    @media screen and (min-width: 1920px) {
+        padding: 6px 0;
+    }
     
     @media screen and (max-width: 1023px) {
         padding: 6px 16px;
