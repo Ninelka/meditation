@@ -21,6 +21,17 @@ const Btn = styled.button`
         font-weight: bold;
         padding: 18px 89px;
     }
+
+    @media (max-width: 1023px) {
+        font-size: 16px;
+        padding: 10px 32px;
+
+        &.size-l {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 40px;
+        }
+    }
 `
 
 const Button = (props) => {
