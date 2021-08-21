@@ -7,6 +7,7 @@ import styled from "styled-components"
 
 const Container = styled.section`
     background-image: url(${startBg});
+    background-repeat: no-repeat;
     background-position: top center;
     background-size: 100% auto;
 `
