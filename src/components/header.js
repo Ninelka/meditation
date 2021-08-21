@@ -1,4 +1,4 @@
-import * as React, { useState } from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import BurgerBtn from './burger-btn';
 import Logo from '../images/common/logo.svg'
