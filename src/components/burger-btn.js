@@ -97,10 +97,39 @@ const BurgerBtn = (props) => {
 
     return (
         <BurgerBtnStyle>
-            <span className='burger-btn' open={props.open} onClick={() => props.setOpen(!props.open)}>
-                <span onClick={() => close()} className='burger-btn__line burger-btn__line--top'></span>
-                <span onClick={() => close()} className=' burger-btn__line burger-btn__line--middle'></span>
-                <span onClick={() => close()} className='burger-btn__line burger-btn__line--bottom'></span>
+            <span
+                className='burger-btn'
+                onKeyDown={() => props.setOpen(!props.open)}
+                open={props.open}
+                onClick={() => props.setOpen(!props.open)}
+                role="button"
+                tabIndex="0"
+                aria-label="Burger button">
+
+                <span
+                    onKeyDown={() => close()}
+                    onClick={() => close()}
+                    role="button"
+                    tabIndex="0"
+                    aria-label="Burger button first line"
+                    className='burger-btn__line burger-btn__line--top'
+                ></span>
+                <span
+                    onKeyDown={() => close()}
+                    onClick={() => close()}
+                    role="button"
+                    tabIndex="0"
+                    aria-label="Burger button second line"
+                    className=' burger-btn__line burger-btn__line--middle'
+                ></span>
+                <span
+                    onKeyDown={() => close()}
+                    onClick={() => close()}
+                    role="button"
+                    tabIndex="0"
+                    aria-label="Burger button third line"
+                    className='burger-btn__line burger-btn__line--bottom'
+                ></span>
             </span>
         </BurgerBtnStyle>
     )
