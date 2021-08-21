@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import { Link } from "gatsby"
 import Logo from '../images/common/logo.svg'
 import Facebook from '../images/footer/ic_facebook.svg';
@@ -99,7 +99,22 @@ const Socials = styled.div`
     }
 `
 
-const socialLinks = [Facebook, Instagram, Twitter];
+const socialLinks = [
+    {
+        url: 'https://facebook.com',
+        text: 'Facebook',
+        icon: Facebook
+    },
+    {
+        url: 'https://instagram.com',
+        text: 'Instagram',
+        icon: Instagram
+    },
+    {
+        url: 'https://twitter.com',
+        text: 'Twitter',
+        icon: Twitter
+    }];
 
 const Footer = () => {
     return (
@@ -119,8 +134,8 @@ const Footer = () => {
                 </nav>
                 <Socials>
                     {socialLinks.map(link => (
-                        <a href="#">
-                            <img width="55px" height="55px" src={link} alt="{link} logo"></img>
+                        <a href={link.url} target="_blank" rel="noopener noreferrer" key={link.url}>
+                            <img width="55px" height="55px" src={link.icon} alt={link.text + " logo"}></img>
                         </a>
                     ))}
                 </Socials>
