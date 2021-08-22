@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { gsap } from "gsap";
 import styled from 'styled-components'
 
@@ -42,62 +42,70 @@ const BurgerBtnStyle = styled.span`
 `
 
 const BurgerBtn = (props) => {
+    let targetElement = useRef();
+    let query = gsap.utils.selector(targetElement);
+
     const [open, setOpen] = useState(false);
     const close = () => setOpen(false);
 
-    if (props.open) {
-        gsap.from('.burger-btn__line--top', {
-            duration: .75,
-            x: 0,
-            ease: 'bounce'
-        })
-        gsap.to('.burger-btn__line--top', {
-            duration: .75,
-            y: 9,
-            x: 6,
-            rotate: 50
-        })
+    useEffect(() => {
 
-        gsap.to('.burger-btn__line--middle', {
-            duration: 1,
-            rotate: -50,
-            ease: 'bounce'
-        })
+        if (props.open) {
+            gsap.from(query('.burger-btn__line--top'), {
+                duration: .75,
+                x: 0,
+                ease: 'bounce'
+            })
+            gsap.to(query('.burger-btn__line--top'), {
+                duration: .75,
+                y: 9,
+                x: 6,
+                rotate: 50
+            })
 
-        gsap.from('.burger-btn__line--bottom', {
-            duration: .75,
-            x: 0,
-            ease: 'bounce'
-        })
-        gsap.to('.burger-btn__line--bottom', {
-            duration: .75,
-            y: -9,
-            x: -6,
-            rotate: 50
-        })
-    } else {
-        gsap.to('.burger-btn__line--top', {
-            duration: .75,
-            y: 0,
-            x: 0,
-            rotate: 0
-        })
-        gsap.to('.burger-btn__line--middle', {
-            duration: 1,
-            rotate: 0,
-            ease: 'bounce'
-        })
-        gsap.to('.burger-btn__line--bottom', {
-            duration: .75,
-            y: 0,
-            x: 0,
-            rotate: 0
-        })
-    };
+            gsap.to(query('.burger-btn__line--middle'), {
+                duration: 1,
+                rotate: -50,
+                ease: 'bounce'
+            })
+
+            gsap.from(query('.burger-btn__line--bottom'), {
+                duration: .75,
+                x: 0,
+                ease: 'bounce'
+            })
+            gsap.to(query('.burger-btn__line--bottom'), {
+                duration: .75,
+                y: -9,
+                x: -6,
+                rotate: 50
+            })
+        } else {
+            gsap.to(query('.burger-btn__line--top'), {
+                duration: .75,
+                y: 0,
+                x: 0,
+                rotate: 0
+            })
+            gsap.to(query('.burger-btn__line--middle'), {
+                duration: 1,
+                rotate: 0,
+                ease: 'bounce'
+            })
+            gsap.to(query('.burger-btn__line--bottom'), {
+                duration: .75,
+                y: 0,
+                x: 0,
+                rotate: 0
+            })
+        };
+
+    }, [props.open]);
 
     return (
         <BurgerBtnStyle>
             <span
+                ref={targetElement}
                 className='burger-btn'
                 onKeyDown={() => props.setOpen(!props.open)}
                 open={props.open}
