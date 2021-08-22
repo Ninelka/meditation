@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { ReactSVG } from 'react-svg'
 
 import PracticeBg from '../images/practice/practice-bg.svg';
 import PracticeImg from '../images/practice/practice-image.svg';
@@ -18,6 +19,10 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media screen and (max-width: 1919px) {
+        max-width: 100%;
+    }
 `
 
 const Title = styled.h2`
@@ -27,6 +32,11 @@ const Title = styled.h2`
     line-height: 130%;
     margin: 77px 0 22px;
     max-width: 706px;
+
+    @media screen and (max-width: 767px) {
+        font-size: 24px;
+        margin: 38px 12px 12px;
+    }
 `
 
 const CardTitle = styled.h3`
@@ -36,6 +46,12 @@ const CardTitle = styled.h3`
     font-size: 32px;
     line-height: 47px;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 767px) {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 0;
+    }
 `
 
 const Text = styled.p`
@@ -44,17 +60,45 @@ const Text = styled.p`
     font-size: 24px;
     line-height: 130%;
     max-width: 1105px;
+
+    @media screen and (max-width: 767px) {
+        font-size: 14px;
+        line-height: 20px;
+
+        &.with-margin {
+            margin: 0 12px;
+        }
+    }
 `
 
 const Row = styled.div`
     width: 100%;
     display: flex;
     margin: 70px 0 16px;
+
+    @media screen and (max-width: 1919px) {
+        justify-content: space-evenly;
+        align-items: center;
+
+        svg {
+            max-width: 60%;
+            height: auto;
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
 `
 
 const CardList = styled.div`
     text-align: center;
     margin-left: 165px;
+
+    @media screen and (max-width: 1919px) {
+        margin-left: auto;
+    }
 `
 
 const CardContainer = styled.div`
@@ -87,6 +131,18 @@ const CardContainer = styled.div`
             }
         }
     }
+
+    @media screen and (max-width: 1919px) {
+        margin: 0 24px;
+    }
+
+    @media screen and (max-width: 1439px) {
+        min-width: auto;
+    }
+
+    @media screen and (max-width: 424px) {
+        max-width: 100%;
+    }
 `
 
 const Arrow = styled.img`
@@ -99,6 +155,26 @@ const Arrow = styled.img`
 const Card = styled.div`
     display: flex;
     flex-direction: column;
+`
+
+const YogaWoman = styled.div`
+
+    @media screen and (max-width: 1919px) {
+        min-width: 50%;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+
+        svg {
+            width: 60%;
+            height: 60%;
+        }
+    }
 `
 
 const data = [
@@ -121,9 +197,11 @@ const Practice = () => {
         <Container>
             <Wrapper>
                 <Title>Practice Wherever You Want, Whenever You Need</Title>
-                <Text>“These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best.”</Text>
+                <Text className="with-margin">“These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best.”</Text>
                 <Row>
-                    <img width="745px" height="594px" src={PracticeImg} alt="yoga woman"></img>
+                    <YogaWoman>
+                        <ReactSVG src={PracticeImg} />
+                    </YogaWoman>
                     <CardList>
                         {data.map(item => (
                             <CardContainer key={item.title}>
