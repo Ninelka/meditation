@@ -128,7 +128,7 @@ const Music = () => {
                                     <PlateTitle>{item.title}</PlateTitle>
                                     <Text>{item.text}</Text>
                                 </div>
-                                <Button></Button>
+                                <Button aria-label={item.title}></Button>
                             </PlateContainer>
                         ))}
                     </PlateList>
