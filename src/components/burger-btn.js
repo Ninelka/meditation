@@ -100,7 +100,7 @@ const BurgerBtn = (props) => {
             })
         };
 
-    }, [props.open]);
+    }, [props.open, query]);
 
     return (
         <BurgerBtnStyle>
