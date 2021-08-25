@@ -1,7 +1,7 @@
 const Links = [
     {
         text: "Home",
-        url: "/home",
+        url: "/",
     },
     {
         text: "Explore",
