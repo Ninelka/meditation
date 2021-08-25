@@ -13,34 +13,70 @@ const GlobalStyles = createGlobalStyle`
     }
 `
 const Container = styled.main`
-	width: 100vw;
-	height: 100vh;
+	min-width: calc(100vw - 32px*2);
+	min-height: calc(100vh - 40px*2);
+	text-align: center;
     display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	background-color: rgba(59, 209, 187, 0.09);
+	background-size: cover;
+	padding: 40px 32px;
+
+	@media screen and (max-width: 424px) {
+        justify-content: flex-start;
+    }
 `
 const Title = styled.h1`
     font-family: "Merienda One";
     color: #1A7F72;
-    font-size: 137px;
+    font-size: 120px;
 	margin: 0;
+
+	@media screen and (max-width: 1919px) {
+        font-size: 100px;
+    }
+
+	@media screen and (max-width: 767px) {
+        font-size: 80px;
+    }
 `
 
 const Text = styled.span`
 	font-family: "Merienda One";
     color: #1A7F72;
-    font-size:96px;
+    font-size:90px;
+
+	@media screen and (max-width: 1919px) {
+        font-size:65px;
+    }
+
+	@media screen and (max-width: 767px) {
+        font-size:45px;
+    }
 `
 
 const MeditatingWoman = styled.div`
-    margin: 52px 0;
+    margin: 32px 0;
 
 	svg {
 		max-width: 400px;
-    	max-height: 378px;
+		max-height: 378px;
 	}
+
+	@media screen and (max-width: 1919px) {
+		svg {
+			max-width: 60%;
+			max-height: auto;
+		}
+    }
+
+	@media screen and (max-width: 424px) {
+        svg {
+			max-width: 100%;
+		}
+    }
 
     .container {
         text-align: center;
