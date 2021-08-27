@@ -20,6 +20,10 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media screen and (max-width: 1919px) {
+        max-width: 100%;
+    }
 `
 
 const Title = styled.h2`
@@ -29,6 +33,11 @@ const Title = styled.h2`
     line-height: 130%;
     margin: 59px 0 22px;
     max-width: 530px;
+
+    @media screen and (max-width: 767px) {
+        font-size: 24px;
+        margin: 38px 12px 12px;
+    }
 `
 
 const PlateTitle = styled.h3`
@@ -38,6 +47,17 @@ const PlateTitle = styled.h3`
     font-size: 32px;
     line-height: 47px;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 1439px) {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    @media screen and (max-width: 424px) {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 0;
+    }
 `
 
 const Text = styled.p`
@@ -46,6 +66,12 @@ const Text = styled.p`
     font-size: 24px;
     line-height: 130%;
     max-width: 1105px;
+    margin: 0 16px;
+
+    @media screen and (max-width: 767px) {
+        font-size: 14px;
+        line-height: 26px;
+    }
 `
 
 const Row = styled.div`
@@ -53,7 +79,30 @@ const Row = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 70px 0 94px;
+    margin: 70px 12px 94px;
+
+    @media screen and (max-width: 1919px) {
+        justify-content: center;
+
+        img {
+            max-width: 60%;
+            height: auto;
+        }
+    }
+
+    @media screen and (max-width: 1199px) {
+        img {
+            max-width: 50%;
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        flex-direction: column-reverse;
+
+        img {
+            max-width: 70%;
+        }
+    }
 `
 
 const PlateList = styled.div`
@@ -77,6 +126,34 @@ const PlateContainer = styled.div`
     :last-child {
         margin-bottom: 0;
     }
+
+    @media screen and (max-width: 1919px) {
+        ${Text} {
+            margin: 0;
+        }
+    }
+
+    @media screen and (max-width: 1439px) {
+        min-width: 30%;
+
+        ${Text} {
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+
+    @media screen and (max-width: 424px) {
+        min-height: 100px;
+        padding: 15px 25px;
+        background-size: cover;
+        border-radius: 10px;
+        margin: 0 16px 32px;
+
+        ${Text} {
+            font-size: 14px;
+            line-height: 26px;
+        }
+    }
 `
 
 const Button = styled.button`
@@ -88,6 +165,7 @@ const Button = styled.button`
     background-repeat: no-repeat;
     border: none;
     border-radius: 50%;
+    flex-shrink: 0;
     cursor: pointer;
 
     :hover {
@@ -97,6 +175,10 @@ const Button = styled.button`
 
 const Image = styled.img`
     transform: scale(1.4);
+
+    @media screen and (max-width: 1919px) {
+        transform: scale(1);
+    }
 `
 
 const data = [
