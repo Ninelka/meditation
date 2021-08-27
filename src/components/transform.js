@@ -90,7 +90,7 @@ const Col = styled.div`
 
     @media screen and (max-width: 1919px) {
         max-width: 50%;
-        margin: 0 16px;
+        margin: 0 32px;
     }
 
     @media screen and (max-width: 424px) {
