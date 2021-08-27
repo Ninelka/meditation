@@ -3,5 +3,16 @@ module.exports = {
     siteUrl: "https://meditationdev.gtsb.io/",
     title: "Meditation",
   },
-  plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-gatsby-cloud", "gatsby-plugin-react-helmet"],
+  plugins: [
+    "gatsby-plugin-styled-components",
+    {
+      resolve: `gatsby-plugin-gatsby-cloud`,
+      options: {
+        allPageHeaders: [
+          "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload",
+        ],
+      }
+    },
+    "gatsby-plugin-react-helmet"
+  ],
 };

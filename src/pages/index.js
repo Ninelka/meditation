@@ -14,7 +14,6 @@ const IndexPage = () => {
       >
         <title>Meditation</title>
         <meta name="description" content="This page is educational for learning Gatsby, Styled components, GSAP animation and more" />
-        <meta name="robots" content="noindex" />
       </Helmet>
       <Layout></Layout>
     </>

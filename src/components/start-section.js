@@ -38,10 +38,11 @@ const Title = styled.h1`
     }
 `
 
-const Text = styled.span`
+const Text = styled.h2`
     font-family: "Heebo";
     color: var(--text-secondary);
     font-size: 24px;
+    font-weight: 400;
     max-width: 1109px;
     margin: 0 16px 30px;
 
