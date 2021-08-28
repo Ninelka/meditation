@@ -11,6 +11,10 @@ const Container = styled.section`
     background-position: top left;
     background-size: 100% auto;
     background-repeat: no-repeat;
+
+    @media screen and (max-width: 1919px) {
+        background-size: cover;
+    }
 `
 
 const Wrapper = styled.div`
@@ -29,6 +33,11 @@ const Title = styled.h2`
     line-height: 130%;
     margin: 128px 0 22px;
     max-width: 620px;
+
+    @media screen and (max-width: 767px) {
+        font-size: 24px;
+        margin: 38px 12px 12px;
+    }
 `
 
 const Text = styled.p`
@@ -37,6 +46,12 @@ const Text = styled.p`
     font-size: 24px;
     line-height: 130%;
     max-width: 1105px;
+    margin: 0 16px;
+
+    @media screen and (max-width: 767px) {
+        font-size: 14px;
+        line-height: 26px;
+    }
 `
 
 const PlateTitle = styled.h3`
@@ -46,13 +61,43 @@ const PlateTitle = styled.h3`
     font-size: 32px;
     line-height: 47px;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 1439px) {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    @media screen and (max-width: 767px) {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 0;
+    }
 `
 
 const Row = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin: 70px 0 162px;
+    margin: 70px 12px 162px;
+
+    @media screen and (max-width: 1919px) {
+        width: auto;
+        
+        img {
+            max-width: 20%;
+            height: auto;
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            max-width: 50%;
+            margin: 50px 0px;
+        }
+    }
 `
 
 const PlateList = styled.div`
@@ -83,6 +128,39 @@ const PlateContainer = styled.div`
 
     :last-child {
         margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 1919px) {
+        min-height: auto;
+        max-width: 350px;
+        min-width: 30%;
+        background-size: cover;
+
+        ${Text} {
+            margin: 0;
+        }
+    }
+
+    @media screen and (max-width: 1439px) {
+        margin-bottom: 50px;
+
+        ${Text} {
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        min-height: 150px;
+        padding: 15px 25px;
+        
+    }
+
+    @media screen and (max-width: 424px) {
+        ${Text} {
+            font-size: 14px;
+            line-height: 26px;
+        }
     }
 `
 
