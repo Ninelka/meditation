@@ -134,9 +134,6 @@ const CardContainer = styled.div`
 
     @media screen and (max-width: 1919px) {
         margin: 0 24px;
-    }
-
-    @media screen and (max-width: 1439px) {
         min-width: auto;
     }
 
