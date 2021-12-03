@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 const Container = styled.header`
     background-color: white;
@@ -19,6 +19,13 @@ const Wrapper = styled.div`
     
     @media screen and (max-width: 1023px) {
         padding: 6px 16px;
+    }
+    
+    img {
+        @media screen and (max-width: 767px) {
+            width: 80px;
+            height: auto;
+        }
     }
 `
 
@@ -43,6 +50,10 @@ const Menu = styled.ul`
 
         &.is-open {
             height: calc(100vh - 131px);
+            
+            @media screen and (max-width: 767px) {
+                height: calc(100vh - 76px);
+            }
         }
     }
 `
@@ -109,7 +120,11 @@ const MenuItem = styled.li`
             font-size: 26px;
         }
     }
+    
+    @media screen and (max-width: 767px) {
+        padding: 16px 15px;
+    }
 
 `
 
-export default { Container, Wrapper, Menu, MenuItem };
+export { Container, Wrapper, Menu, MenuItem };
