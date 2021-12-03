@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import styled, { createGlobalStyle } from 'styled-components'
 import { ReactSVG } from 'react-svg'
-import Button from '../components/button';
+import Button from '../components/button/button';
 import meditatingWoman from '../images/common/meditating-woman.svg';
 
 // styles

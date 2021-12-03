@@ -1,13 +1,13 @@
 import React from 'react'
 
-import Header from './header'
-import Footer from './footer';
-import StartSection from './start-section';
-import FeatureSection from './feature-section';
-import Practice from './practice';
-import Music from './music';
-import Meditation from './meditation';
-import Transform from './transform';
+import Header from '../header/header'
+import Footer from '../footer/footer';
+import StartSection from '../start-section/start-section';
+import FeatureSection from '../feature-section/feature-section';
+import Practice from '../practice/practice';
+import Music from '../music/music';
+import Meditation from '../meditation/meditation';
+import Transform from '../transform/transform';
 
 import { createGlobalStyle } from "styled-components"
 import "@fontsource/heebo/400.css"
@@ -35,14 +35,14 @@ const Layout = () => {
     return (
         <main>
             <GlobalStyles />
-            <Header></Header>
-            <StartSection></StartSection>
-            <FeatureSection></FeatureSection>
-            <Practice></Practice>
-            <Music></Music>
-            <Meditation></Meditation>
-            <Transform></Transform>
-            <Footer></Footer>
+            <Header/>
+            <StartSection/>
+            <FeatureSection/>
+            <Practice/>
+            <Music/>
+            <Meditation/>
+            <Transform/>
+            <Footer/>
         </main>
     )
 }
